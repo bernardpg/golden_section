@@ -36,40 +36,65 @@ x_L=x_1;
 
 f_L=f_1;
 
+
 x_1=x_2;
+
 
 f_1=f_2;
 
+
 x_2=(1-tau)*x_U+tau*x_L;
+
 
 f_2=CF(x_2);
 
+
 elseif f_1<f_2
+
 
 x_U=x_2;
 
+
 f_U=f_2;
+
 
 x_2=x_1;
 
+
 f_2=f_1;
+
 
 x_1=(1-tau)*x_L+tau*x_U;
 
+
 f_1=CF(x_1);
 
+
 end
+
 
 k=k+1;
 
+
 golden_section (x_L,x_U,k,N)
 
+
 end
+
 
 f_1
+
+
 f_2
+
+
 end
 
+
 function a=CF(x)
+
+
 a=; your wanted cost function 
+
+
 end
